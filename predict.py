@@ -41,9 +41,9 @@ if selected == 'Diabetes Prediction':
     with col1:
         sex = st.selectbox("Select your gender:", ["Male", "Female"])
 
-    if sex == "Female":
-        with col2:
-            Pregnancies = st.text_input('Number of Pregnancies')
+    
+    with col2:
+            Pregnancies = st.text_input('Number of Pregnancies', disabled=(sex != "Female"))
 
     with col3:
         Glucose = st.text_input('Glucose Level')
